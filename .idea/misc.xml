@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Trabalho/Projetos Android Studio/Burguer_app/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1615" />
+        <entry key="..\:/Trabalho/Projetos Android Studio/Burguer_app/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1615" />
+        <entry key="..\:/Trabalho/Projetos Android Studio/Burguer_app/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/victor.dsilva/BurguerAssesement/app/src/main/res/layout/activity_main.xml" value="0.22" />
       </map>
     </option>

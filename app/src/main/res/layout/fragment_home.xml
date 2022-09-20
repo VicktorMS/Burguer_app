@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".fragments.HomeFragment"
     android:background="#121013"
     android:orientation="vertical">
 
@@ -97,9 +97,19 @@
                 android:backgroundTint="#2E2D2D"
                 android:textSize="14sp"
                 android:textAllCaps="false"/>
-
         </LinearLayout>
 
     </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cardapio_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+
+
 
 </LinearLayout>

@@ -32,19 +32,28 @@
                 android:textSize="14sp"
                 android:layout_marginHorizontal="10dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="R$6,99"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_gravity="left"/>
-            <Button
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$6,99"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_alignParentLeft="true"
+                    />
+
+                <Button
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="100"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

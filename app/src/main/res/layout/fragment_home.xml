@@ -49,6 +49,11 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="38dp"
@@ -75,10 +80,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
+<<<<<<< HEAD
                 android:backgroundTint="#2E2D2D"
                 android:text="Frango"
                 android:textAllCaps="false"
                 android:textSize="14sp" />
+=======
+                android:text="Frango"
+                android:backgroundTint="#2E2D2D"
+                android:textSize="14sp"
+                android:textAllCaps="false"/>
+>>>>>>> origin/master
 
             <Button
                 android:layout_width="wrap_content"
@@ -98,18 +110,27 @@
                 android:textSize="14sp"
                 android:textAllCaps="false"/>
         </LinearLayout>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_cardapio_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         />
 
 
 
 
 
+=======
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        tools:listitem="@layout/cardapio_item_list"/>
+>>>>>>> origin/master
 
 </LinearLayout>

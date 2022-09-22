@@ -6,100 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#121013"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="bottom">
 
-    <TextView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="50dp"
-        android:text="Qual o seu"
-        android:paddingTop="10dp"
-        android:textColor="#969696"
-        android:textSize="24sp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="20dp"
-        android:text="Burguer Favorito?"
-        android:textColor="#E9E5E5"
-        android:textSize="34sp"/>
+        android:layout_height="70dp"
+        app:menu="@menu/menu_bottom_navigation"
+        />
 
 
-    <!--input text-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_margin="20dp"
-        android:hint="Procurar"
-
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-
-        app:startIconDrawable="@drawable/ic_baseline_search_24"
-        app:endIconMode="clear_text"
-        app:boxStrokeWidth="0dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txt_procurar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginLeft="20dp"
-        android:fillViewport="false"
-        android:scrollbars="none"
-        android:requiresFadingEdge="horizontal"
-        android:fadingEdgeLength="100dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:text="Todos"
-                android:backgroundTint="#4B494C"
-                android:textSize="14sp"
-                android:textAllCaps="false" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:backgroundTint="#2E2D2D"
-                android:text="Frango"
-                android:textAllCaps="false"
-                android:textSize="14sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:text="Bife"
-                android:backgroundTint="#2E2D2D"
-                android:textSize="14sp"
-                android:textAllCaps="false"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:text="Vegetariano"
-                android:backgroundTint="#2E2D2D"
-                android:textSize="14sp"
-                android:textAllCaps="false"/>
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
 
 </LinearLayout>

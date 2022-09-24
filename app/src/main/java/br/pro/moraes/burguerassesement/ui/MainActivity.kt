@@ -1,8 +1,9 @@
-package br.pro.moraes.burguerassesement
+package br.pro.moraes.burguerassesement.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import br.pro.moraes.burguerassesement.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

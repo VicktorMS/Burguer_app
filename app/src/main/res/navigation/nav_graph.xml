@@ -7,7 +7,12 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="br.pro.moraes.burguerassesement.fragments.HomeFragment"
+        android:name="br.pro.moraes.burguerassesement.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="br.pro.moraes.burguerassesement.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
 </navigation>

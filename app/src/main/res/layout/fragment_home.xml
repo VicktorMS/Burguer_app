@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment"
+    tools:context=".ui.fragments.HomeFragment"
     android:background="#121013"
     android:orientation="vertical">
 
@@ -15,6 +15,7 @@
         android:layout_marginTop="50dp"
         android:text="Qual o seu"
         android:paddingTop="10dp"
+        android:fontFamily="@font/jacques_francois"
         android:textColor="#969696"
         android:textSize="24sp"/>
     <TextView
@@ -22,7 +23,7 @@
         android:layout_height="40dp"
         android:layout_marginHorizontal="20dp"
         android:text="Burguer Favorito?"
-
+        android:fontFamily="@font/jacques_francois"
         android:textColor="#E9E5E5"
         android:textSize="34sp"/>
 
@@ -60,6 +61,7 @@
         android:layout_marginLeft="20dp"
         android:fillViewport="false"
         android:scrollbars="none"
+        android:fontFamily="@font/jacques_francois"
         android:requiresFadingEdge="horizontal"
         android:fadingEdgeLength="100dp">
 
@@ -74,13 +76,15 @@
                 android:text="Todos"
                 android:backgroundTint="#4B494C"
                 android:textSize="14sp"
-                android:textAllCaps="false" />
+                android:fontFamily="@font/jacques_francois"
+                android:textAllCaps="false"
+                />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-
+                android:fontFamily="@font/jacques_francois"
                 android:text="Frango"
                 android:backgroundTint="#2E2D2D"
                 android:textSize="14sp"
@@ -94,7 +98,9 @@
                 android:text="Bife"
                 android:backgroundTint="#2E2D2D"
                 android:textSize="14sp"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                android:fontFamily="@font/jacques_francois"
+                />
 
             <Button
                 android:layout_width="wrap_content"
@@ -103,6 +109,7 @@
                 android:text="Vegetariano"
                 android:backgroundTint="#2E2D2D"
                 android:textSize="14sp"
+                android:fontFamily="@font/jacques_francois"
                 android:textAllCaps="false"/>
         </LinearLayout>
 

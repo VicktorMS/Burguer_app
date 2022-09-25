@@ -27,6 +27,7 @@ class HomeFragment : Fragment() {
 
         setupRecyclerView()
         setupObservers()
+        btnsHorizontalBar()
 
         return view
 
@@ -40,14 +41,44 @@ class HomeFragment : Fragment() {
             requireContext(),2,LinearLayoutManager.VERTICAL,false)
     }
 
+    fun btnsHorizontalBar(){
+        binding.btnFilterFrango.setOnClickListener{
+            viewModel.cardapio.observe(viewLifecycleOwner){
+                adapter.submitList(viewModel.getFiltrarFrango())
+                binding.rvCardapioHome.adapter = adapter
+            }
+        }
+
+        binding.btnFilterTodos.setOnClickListener{
+            setupObservers()
+        }
+
+        binding.btnFilterCarne.setOnClickListener{
+            viewModel.cardapio.observe(viewLifecycleOwner){
+                adapter.submitList(viewModel.getFiltrarCarne())
+                binding.rvCardapioHome.adapter = adapter
+            }
+        }
+
+        binding.btnFilterVeg.setOnClickListener{
+            viewModel.cardapio.observe(viewLifecycleOwner){
+                adapter.submitList(viewModel.getFiltrarVeg())
+                binding.rvCardapioHome.adapter = adapter
+            }
+        }
+
+
+    }
+
     fun setupObservers(){
         viewModel.cardapio.observe(viewLifecycleOwner){
             adapter.submitList(it)
             binding.rvCardapioHome.adapter = adapter
         }
 
-    }
 
+    }
+    
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

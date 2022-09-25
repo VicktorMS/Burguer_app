@@ -2,16 +2,19 @@ package br.pro.moraes.burguerassesement.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.pro.moraes.burguerassesement.R
 import br.pro.moraes.burguerassesement.data.Produto
 
 class BurguerViewModel: ViewModel() {
     val cardapioLista = mutableListOf<Produto>(
-        Produto("Cheese Burguer", 12.90, "Carne"),
-        Produto("American", 19.00, "Carne"),
-        Produto("Bacon Burguer", 18.00, "Carne"),
-        Produto("Veg Burguer", 15.00, "Vegetariano"),
-        Produto("Chicken Burguer", 16.00, "Frango"),
-        Produto("Texas", 23.90, "Carne"))
+        Produto("Cheese Burguer", 12.90F, R.drawable.ic_temp_frango, "Frango"),
+        Produto("American", 19.00F, R.drawable.ic_temp_burguer, "Carne"),
+        Produto("Bacon Burguer", 18.00F, R.drawable.ic_temp_burguer, "Carne"),
+        Produto("Veg Burguer", 15.00F, R.drawable.ic_temp_frango, "Vegetariano"),
+        Produto("Chicken Burguer", 16.00F, R.drawable.ic_temp_frango, "Frango"),
+        Produto("Texas", 23.90F,R.drawable.ic_temp_burguer, "Carne"))
+
+
 
      val cardapio = MutableLiveData<List<Produto>>()
 

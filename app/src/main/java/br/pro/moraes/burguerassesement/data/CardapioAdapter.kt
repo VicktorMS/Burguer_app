@@ -20,6 +20,7 @@ class CardapioAdapter: ListAdapter<Produto, CardapioAdapter.ViewHolder> (Produto
         fun bind(item: Produto) {
             val preco_form = item.preco.toString().replace('.', ',')
             binding.tvNomeProduto.text = item.nome
+            binding.imgvProduto.setImageResource(item.img)
             binding.tvPrecoProduto.text = "R$${preco_form}"
         }
 

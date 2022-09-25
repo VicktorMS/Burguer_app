@@ -70,6 +70,7 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btn_filter_todos"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
@@ -81,6 +82,7 @@
                 />
 
             <Button
+                android:id="@+id/btn_filter_frango"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
@@ -92,10 +94,11 @@
 
 
             <Button
+                android:id="@+id/btn_filter_carne"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-                android:text="Bife"
+                android:text="Carne"
                 android:backgroundTint="#2E2D2D"
                 android:textSize="14sp"
                 android:textAllCaps="false"
@@ -103,6 +106,7 @@
                 />
 
             <Button
+                android:id="@+id/btn_filter_veg"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
@@ -121,7 +125,8 @@
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="15dp"
+        android:requiresFadingEdge="vertical"
         tools:listitem="@layout/cardapio_item_list"/>
 
 

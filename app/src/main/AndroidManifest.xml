@@ -17,7 +17,7 @@
             android:name=".ui.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/noActionBarTheme"
+            android:theme="@style/Tema_Burguer"
             android:windowSoftInputMode="adjustPan|adjustResize"
             >
             <intent-filter>

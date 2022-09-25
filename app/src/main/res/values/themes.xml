@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="noActionBarTheme" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="Tema_Burguer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#EEC794</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

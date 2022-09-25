@@ -31,9 +31,8 @@ class CartFragment : Fragment() {
 
     private fun setupRecyclerView() {
         binding.rvListaCarrinho.adapter = adapter
-        binding.rvListaCarrinho.layoutManager = GridLayoutManager(
+        binding.rvListaCarrinho.layoutManager = LinearLayoutManager(
             requireContext(),
-            2,
             LinearLayoutManager.VERTICAL,
             false
         )

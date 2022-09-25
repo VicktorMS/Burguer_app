@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginHorizontal="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="#343333"
+        app:cardCornerRadius="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgv_produto"
+                android:layout_width="128dp"
+                android:layout_height="139dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.058"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.545"
+                app:srcCompat="@drawable/ic_temp_burguer" />
+
+            <TextView
+                android:id="@+id/tv_nome_produto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="68dp"
+                android:text="Chicken Burguer"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toEndOf="@+id/imgv_produto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.22" />
+
+            <TextView
+                android:id="@+id/tv_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jejugothic_regular"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_qnt"
+                app:layout_constraintStart_toEndOf="@+id/btn_retirar_qnt"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nome_produto" />
+
+            <ImageButton
+                android:id="@+id/btn_add_qnt"
+                android:layout_width="32dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tv_nome_produto"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#33FFFFFF"
+                android:src="@drawable/ic_baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.773" />
+
+
+            <TextView
+                android:id="@+id/tv_preco_produto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/jejugothic_regular"
+                android:text="R$ 6,99"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgv_produto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nome_produto"
+                app:layout_constraintVertical_bias="0.577" />
+
+
+            <ImageButton
+                android:id="@+id/btn_retirar_qnt"
+                android:layout_width="32dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tv_nome_produto"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#33FFFFFF"
+                android:src="@drawable/ic_baseline_remove_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_preco_produto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nome_produto"
+                app:layout_constraintVertical_bias="0.756" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

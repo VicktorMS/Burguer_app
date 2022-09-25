@@ -7,19 +7,21 @@ import br.pro.moraes.burguerassesement.data.Produto
 
 class BurguerViewModel: ViewModel() {
     val cardapioLista = mutableListOf<Produto>(
-        Produto("Cheese Burguer", 12.90F, R.drawable.ic_temp_frango, "Frango"),
-        Produto("American", 19.00F, R.drawable.ic_temp_burguer, "Carne"),
-        Produto("Bacon Burguer", 18.00F, R.drawable.ic_temp_burguer, "Carne"),
-        Produto("Veg Burguer", 15.00F, R.drawable.ic_temp_frango, "Vegetariano"),
-        Produto("Chicken Burguer", 16.00F, R.drawable.ic_temp_frango, "Frango"),
-        Produto("Texas", 23.90F,R.drawable.ic_temp_burguer, "Carne"))
+        Produto(1,"Cheese Burguer", 12.90F, R.drawable.ic_temp_frango, "Frango"),
+        Produto(2,"American", 19.00F, R.drawable.ic_temp_burguer, "Carne"),
+        Produto(3,"Bacon Burguer", 18.00F, R.drawable.ic_temp_burguer, "Carne"),
+        Produto(4,"Veg Burguer", 15.00F, R.drawable.ic_temp_frango, "Vegetariano"),
+        Produto(5,"Chicken Burguer", 16.00F, R.drawable.ic_temp_frango, "Frango"),
+        Produto(6,"Texas", 23.90F,R.drawable.ic_temp_burguer, "Carne"))
 
+    val carrinhoLista = mutableListOf<Produto>()
+    val carrinho = MutableLiveData<List<Produto>>()
 
-
-     val cardapio = MutableLiveData<List<Produto>>()
+    val cardapio = MutableLiveData<List<Produto>>()
 
     init {
         cardapio.value = cardapioLista
+        carrinho.value = carrinhoLista
     }
 
 
@@ -41,5 +43,12 @@ class BurguerViewModel: ViewModel() {
             it.tipo == "Frango"
         }
     }
+
+    fun addInCarrinho(produto: Produto){
+        carrinhoLista.add(produto)
+        carrinho.value = carrinhoLista
+    }
+
+
 
 }

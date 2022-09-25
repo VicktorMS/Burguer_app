@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/nav_home"
         android:name="br.pro.moraes.burguerassesement.ui.fragments.HomeFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/cartFragment"
-        android:name="br.pro.moraes.burguerassesement.CartFragment"
-        android:label="fragment_cart"
+        android:id="@+id/nav_cart"
+        android:name="br.pro.moraes.burguerassesement.ui.fragments.CartFragment"
+        android:label="Carrinho"
         tools:layout="@layout/fragment_cart" />
 </navigation>

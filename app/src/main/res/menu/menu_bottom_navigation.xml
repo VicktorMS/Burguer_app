@@ -12,12 +12,12 @@
         android:title="Carrinho"/>
 
     <item
-        android:id="@+id/nav_favorite"
+        android:id="@+id/navbottom_favorite_button"
         android:icon="@drawable/ic_baseline_favorite_border_24"
         android:title="Favoritos"/>
 
     <item
-        android:id="@+id/nav_perfil"
+        android:id="@+id/navbottom_perfil_button"
         android:icon="@drawable/ic_baseline_person_outline_24"
         android:title="Perfil"/>
 

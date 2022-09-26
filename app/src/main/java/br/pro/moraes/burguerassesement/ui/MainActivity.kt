@@ -1,5 +1,6 @@
 package br.pro.moraes.burguerassesement.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -32,11 +33,33 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_home, R.id.nav_cart))
+            setOf(R.id.nav_home, R.id.nav_cart, R.id.nav_share))
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         findViewById<BottomNavigationView>(R.id.nav_view)?.setupWithNavController(navController)
 
-
+        setupObservers()
     }
+
+    private fun setupObservers() {
+        viewModel.textoCompartilhado.observe(this){
+            if (!it.isNullOrBlank()){
+                enviarTexto(it)
+                viewModel.setTextoCompartilhado("")
+            }
+        }
+    }
+
+    // Enviar texto para alguém
+    private fun enviarTexto(textMessage : String) {
+        val sendIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, textMessage)
+            type = "text/plain"
+        }
+        if (sendIntent.resolveActivity(packageManager) != null) {
+            startActivity(sendIntent)
+        }
+    }
+
 }

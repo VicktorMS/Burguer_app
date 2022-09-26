@@ -10,12 +10,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.pro.moraes.burguerassesement.R
 import br.pro.moraes.burguerassesement.data.CardapioAdapter
+import br.pro.moraes.burguerassesement.data.CarrinhoAdapter
 import br.pro.moraes.burguerassesement.databinding.FragmentCartBinding
 import br.pro.moraes.burguerassesement.ui.BurguerViewModel
 
 class CartFragment : Fragment() {
-// RECYCLE VIEW DE TESTE, CLONADO
+
     val viewModel: BurguerViewModel by activityViewModels()
+
     private var _binding: FragmentCartBinding? = null
     private val binding get() = _binding!!
 
@@ -23,11 +25,12 @@ class CartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentCartBinding.inflate(inflater, container, false)
         val view = binding.root
-
+        setupRecyclerView()
+        setupObservers()
         return view
     }
 
-    val adapter = CardapioAdapter()
+    val adapter = CarrinhoAdapter()
 
     private fun setupRecyclerView() {
         binding.rvListaCarrinho.adapter = adapter
@@ -41,7 +44,7 @@ class CartFragment : Fragment() {
     fun setupObservers(){
         viewModel.cardapio.observe(viewLifecycleOwner){
             adapter.submitList(
-                viewModel.getFiltrarCarne()
+                viewModel.getCarrinho()
             )
             binding.rvListaCarrinho.adapter  = adapter
         }

@@ -13,13 +13,13 @@
         android:title="Carrinho"/>
 
     <item
-        android:id="@+id/navbottom_favorite_button"
-        android:icon="@drawable/ic_baseline_favorite_border_24"
-        android:title="Favoritos"/>
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="Compartilhar"/>
 
     <item
         android:id="@+id/navbottom_perfil_button"
-        android:icon="@drawable/ic_baseline_person_outline_24"
-        android:title="Perfil"/>
+        android:icon="@drawable/ic_baseline_favorite_border_24"
+        android:title="Favoritos"/>
 
 </menu>
